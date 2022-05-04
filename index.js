@@ -1,4 +1,4 @@
-const PORT = 8000
+// const PORT = 8000
 
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -30,4 +30,5 @@ app.get('/news', (req, res) => {
         }).catch(error => { console.log(error) });
 })
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+// app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
+app.listen(process.env.PORT || 5000)
